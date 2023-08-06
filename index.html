@@ -5,35 +5,74 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
-    button {
+    .video-container {
+      width: 100%;
+      height: 100%;
+    }
+    .control-panel {
+      overflow: hidden;
+      padding: 5px;
+      background: black;
+    }
+    .buttons {
+      float: left;
       border-style: none;
+      /*border: solid 1px yellow;*/
+      width: 25px;
+      height: 25px;
       color: white;
       cursor: pointer;
       background: transparent;
+    }
+    .time-panel {
+      float: left;
+      height: 25px;
+      vertical-align: center;
+      padding: 5px;
+      /*border: solid 1px blue;*/
+      font-size: 16px;
+      color: white;
+    }
+    .slider {
+      float: left;
+      /*border: solid 1px red;*/
+      height: 25px;
+      padding-top: 15px;
+      width: 70%;
+    }
+    .progress {
+      background-color: white;
+      height: 3px;
     }
   </style>
 </head>
 <body>
   <div id="player" style="width: 800px; height: 600px;">
 
-    <div class="js-video-container" style="width: 100%; height: 100%"></div>
+    <div class="js-video-container video-container"></div>
 
-    <div style="background: black">
-      <button class="js-play-button" name="play"><i class="fa fa-play" aria-hidden="true"></i></button>
-      <button class="js-pause-button" name="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
-      <button class="js-volume-button" name="volume">Громкость</button>
-      <button class="js-mute-button" name="mute">Без звука</button>
-      <button class="js-fullscreen-button" name="fullscreen">На весь экран</button>
-    </div>
-    <div style="color: white;">
-      <span class="js-current-time"></span>
-      —
-      <span class="js-duration"></span>
-    </div>
+    <div class="control-panel">
+      <div>
+        <button class="js-play-button buttons" name="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button class="js-pause-button buttons" name="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+      <div>
 
-    <div class="js-progress" style="background-color: grey;">
-      <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
-    </div>
+      <div class="time-panel">
+        <span class="js-current-time"></span> / <span class="js-duration"></span>
+      </div>
+
+      <div class="slider">
+        <div class="js-progress">
+          <div class="js-progress-slider progress">&nbsp;</div>
+        </div>
+      </div>
+
+<!--    </div>-->
+<!--      <button class="js-volume-button" name="volume">Громкость</button>-->
+<!--      <button class="js-mute-button" name="mute">Без звука</button>-->
+<!--      <button class="js-fullscreen-button" name="fullscreen">На весь экран</button>-->
+<!--    </div>-->
+
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

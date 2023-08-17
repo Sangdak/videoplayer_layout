@@ -3,6 +3,7 @@
 <head>
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/svg" href="./favicon.png"/>
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
     .video-player {
@@ -39,27 +40,6 @@
       font-size: 18px;
       margin: 6px;
     }
-
-    /*.time-panel {*/
-    /*  !*float: left;*!*/
-    /*  height: 25px;*/
-    /*  vertical-align: center;*/
-    /*  padding: 5px;*/
-    /*  !*border: solid 1px blue;*!*/
-    /*  font-size: 16px;*/
-    /*  color: white;*/
-    /*}*/
-    /*.slider {*/
-    /*  !*float: left;*!*/
-    /*  !*border: solid 1px red;*!*/
-    /*  height: 25px;*/
-    /*  padding-top: 15px;*/
-    /*  width: 70%;*/
-    /*}*/
-    /*.progress {*/
-    /*  background-color: white;*/
-    /*  height: 3px;*/
-    /*}*/
   </style>
 </head>
 <body>
@@ -74,21 +54,6 @@
       <button class="js-fullscreen-button control-button-end" name="fullscreen"><i class="fa fa-expand" aria-hidden="true"></i></button>
     </div>
   </div>
-
-<!--        <div class="time-panel">-->
-<!--          <span class="js-current-time"></span> / <span class="js-duration"></span>-->
-<!--        </div>-->
-
-<!--        <div class="slider">-->
-<!--          <div class="js-progress">-->
-<!--            <div class="js-progress-slider progress">&nbsp;</div>-->
-<!--          </div>-->
-<!--        </div>-->
-        <!--    </div>-->
-        <!--      <button class="js-volume-button" name="volume">Громкость</button>-->
-        <!--      <button class="js-mute-button" name="mute">Без звука</button>-->
-        <!--      <button class="js-fullscreen-button" name="fullscreen">На весь экран</button>-->
-        <!--    </div>-->
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>

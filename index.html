@@ -5,23 +5,19 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
   <style type="text/css">
-    * {
-      box-sizing: border-box;
-    }
     .video-player {
-      background-color: black;
       box-shadow: 0 0 35px rgba(0, 0, 0, 1);
       display: flex;
-      flex-direction: column;
+      flex-flow: column wrap;
       height: 600px;
       width: 800px;
     }
     .video-container {
-      flex: 1;
-      height: 100%;
-      width: 100%;
+      flex-grow: 1;
     }
     .control-panel {
+      display: flex;
+      background-color: black;
     }
     .control-button {
       background: transparent;
@@ -29,30 +25,41 @@
       color: white;
       cursor: pointer;
       font-size: 18px;
-      height: 25px;
-      margin: 10px;
-      width: 25px;
+      margin: 6px;
     }
-    .time-panel {
-      /*float: left;*/
-      height: 25px;
-      vertical-align: center;
-      padding: 5px;
-      /*border: solid 1px blue;*/
-      font-size: 16px;
+    .empty-space-item {
+      flex-grow: 1;
+    }
+    .control-button-end {
+      justify-content: flex-end;
+      background: transparent;
+      border-style: none;
       color: white;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 6px;
     }
-    .slider {
-      /*float: left;*/
-      /*border: solid 1px red;*/
-      height: 25px;
-      padding-top: 15px;
-      width: 70%;
-    }
-    .progress {
-      background-color: white;
-      height: 3px;
-    }
+
+    /*.time-panel {*/
+    /*  !*float: left;*!*/
+    /*  height: 25px;*/
+    /*  vertical-align: center;*/
+    /*  padding: 5px;*/
+    /*  !*border: solid 1px blue;*!*/
+    /*  font-size: 16px;*/
+    /*  color: white;*/
+    /*}*/
+    /*.slider {*/
+    /*  !*float: left;*!*/
+    /*  !*border: solid 1px red;*!*/
+    /*  height: 25px;*/
+    /*  padding-top: 15px;*/
+    /*  width: 70%;*/
+    /*}*/
+    /*.progress {*/
+    /*  background-color: white;*/
+    /*  height: 3px;*/
+    /*}*/
   </style>
 </head>
 <body>
@@ -63,6 +70,8 @@
       <button class="js-pause-button control-button" name="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
       <button class="js-volume-button control-button" name="volume-up"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
       <button class="js-mute-button control-button" name="volume-off"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <div class="empty-space-item"></div>
+      <button class="js-fullscreen-button control-button-end" name="fullscreen"><i class="fa fa-expand" aria-hidden="true"></i></button>
     </div>
   </div>
 

@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" type="image/svg" href="./favicon.png"/>
   <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style type="text/css">
     .video-player {
       box-shadow: 0 0 35px rgba(0, 0, 0, 1);
@@ -12,7 +15,7 @@
       flex-flow: column wrap;
       height: 480px;
       width: 640px;
-      margin-left: -3px;
+      margin: -3px;
     }
     .video-container {
       flex-grow: 1;
@@ -27,10 +30,17 @@
       color: white;
       cursor: pointer;
       font-size: 16px;
-      margin: 2px;
-      margin-top: -3px;
+      margin: -3px 2px 2px;
     }
-    .empty-space-item {
+    .viewing-panel {
+      display: flex;
+      flex-grow: 1;
+      color: white;
+      font-family: 'roboto', sans-serif;
+      font-size: 13px;
+      margin-top: 3px;
+    }
+    .viewing-panel .empty-space-item {
       flex-grow: 1;
     }
     .control-button-end {
@@ -40,8 +50,10 @@
       color: white;
       cursor: pointer;
       font-size: 16px;
-      margin: 2px;
-      margin-bottom: 7px;
+      margin: 2px 2px 7px;
+    }
+    .video-duration {
+      justify-content: flex-end;
     }
   </style>
 </head>
@@ -53,8 +65,16 @@
       <button class="js-pause-button control-button" name="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
       <button class="js-volume-button control-button" name="volume-up"><i class="fa fa-volume-off" aria-hidden="true"></i></button>
       <button class="js-mute-button control-button" name="volume-off"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
-      <div class="empty-space-item"></div>
+        <div class="viewing-panel">
+          <div class="js-current-time viewing-time"></div>
+          <div class="empty-space-item"></div>
+<!--          <div class="js-progress viewing-progressbar" style="background-color: grey;">-->
+<!--            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>-->
+<!--          </div>-->
+          <div class="js-duration video-duration" style="justify-content: flex-end;"></div>
+        </div>
       <button class="js-fullscreen-button control-button-end" name="fullscreen"><i class="fa fa-expand" aria-hidden="true"></i></button>
+      </div>
     </div>
   </div>
 

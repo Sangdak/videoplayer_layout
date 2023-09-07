@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style type="text/css">
     .video-player {
       box-shadow: 0 0 35px rgba(0, 0, 0, 1);
@@ -24,6 +25,7 @@
       background-color: black;
     }
     .control-panel .control-button {
+      outline: black;
       background: transparent;
       border-style: none;
       width: 13px;
@@ -34,7 +36,7 @@
     }
    .button-right {
      align-items: flex-end;
-     margin-left: 1px !important;
+     margin-left: -1px !important;
     }
     .viewing-panel {
       display: flex;
@@ -42,7 +44,7 @@
       color: white;
       font-family: 'roboto', sans-serif;
       font-size: 13px;
-      margin: 2px;
+      margin: 3px 1px;
     }
     .viewing-panel .viewing-progressbar {
       display: flex;
@@ -76,8 +78,9 @@
       transition-duration: .3s;
       transition-timing-function: ease-in;
     }
-     .video-duration {
+    .video-duration {
       justify-content: flex-end;
+      margin-right: 2px;
     }
   </style>
 </head>

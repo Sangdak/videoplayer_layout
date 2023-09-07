@@ -50,10 +50,12 @@
       border-radius: 3px;
       height: 4px;
       margin: 6px 6px;
+      background-color: grey;
     }
     .viewing-panel .viewing-progressbar .progress-bar{
       border-radius: inherit;
       height: 4px;
+      background-color: red;
     }
     .dot-slider {
       height: 6px;
@@ -63,6 +65,16 @@
       background-color: #f8104d;
       box-shadow: 3px 3px black;
       margin: -3px;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: .3s;
+      transition-timing-function: ease-out;
+    }
+    .control-panel:hover .dot-slider {
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: .3s;
+      transition-timing-function: ease-in;
     }
      .video-duration {
       justify-content: flex-end;
@@ -79,8 +91,8 @@
       <button class="js-mute-button control-button" name="volume-off"><i class="fa fa-volume-up" aria-hidden="true"></i></button>
         <div class="viewing-panel">
           <div class="js-current-time viewing-time"></div>
-          <div class="js-progress viewing-progressbar" style="background-color: grey;">
-            <div class="js-progress-slider progress-bar" style="background-color: red;">&nbsp;</div>
+          <div class="js-progress viewing-progressbar">
+            <div class="js-progress-slider progress-bar">&nbsp;</div>
             <div class="dot-slider"></div>
           </div>
           <div class="js-duration video-duration" style="justify-content: flex-end;"></div>

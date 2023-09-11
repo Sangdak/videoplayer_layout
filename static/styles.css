@@ -1,0 +1,72 @@
+.video-player {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-flow: column wrap;
+    height: 480px;
+    width: 640px;
+}
+.video-container {
+    flex-grow: 1;
+}
+.control-panel {
+    display: flex;
+    background-color: black;
+}
+.control-panel .control-button {
+    outline: black;
+    background: transparent;
+    border-style: none;
+    width: 13px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px 14px 7px 2px;
+}
+.button-right {
+    align-items: flex-end;
+    margin-left: -1px !important;
+}
+.viewing-panel {
+    display: flex;
+    flex-grow: 1;
+    color: white;
+    font-family: 'roboto', sans-serif;
+    font-size: 13px;
+    margin: 3px 1px;
+}
+.viewing-panel .viewing-progressbar {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 3px;
+    height: 4px;
+    margin: 6px 6px;
+    background-color: grey;
+}
+.viewing-panel .viewing-progressbar .progress-bar{
+    border-radius: inherit;
+    height: 4px;
+    background-color: red;
+}
+.dot-slider {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: #f8104d;
+    box-shadow: 3px 3px black;
+    margin: -3px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+}
+.control-panel:hover .dot-slider {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+}
+.video-duration {
+    justify-content: flex-end;
+    margin-right: 2px;
+}

@@ -1,46 +1,47 @@
 .video-player {
-    box-shadow: 0 0 35px rgba(0, 0, 0, 1);
     display: flex;
     flex-flow: column wrap;
-    height: 480px;
-    width: 640px;
+    height: 600px;
+    width: 800px;
+    margin: 7px 6px;
+    background-color: black;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 1);
 }
 .video-container {
     flex-grow: 1;
 }
 .control-panel {
     display: flex;
-    background-color: black;
+    align-items: center;
+    padding-bottom: 4px;
 }
 .control-panel .control-button {
+    width: 35px;
+    height: 35px;
+    margin-right: 2px;
     outline: black;
     background: transparent;
     border-style: none;
-    width: 13px;
     color: white;
+    font-size: 20px;
     cursor: pointer;
-    font-size: 16px;
-    margin: 0px 14px 7px 2px;
-}
-.button-right {
-    align-items: flex-end;
-    margin-left: -1px !important;
 }
 .viewing-panel {
     display: flex;
     flex-grow: 1;
+    align-items: center;
     color: white;
     font-family: 'roboto', sans-serif;
-    font-size: 13px;
-    margin: 3px 1px;
+    font-size: 16px;
 }
 .viewing-panel .viewing-progressbar {
     display: flex;
     flex-grow: 1;
-    border-radius: 3px;
-    height: 4px;
-    margin: 6px 6px;
+    align-items: center;
+    margin: 0 10px;
+    height: 5px;
     background-color: grey;
+    border-radius: 3px;
 }
 .viewing-panel .viewing-progressbar .progress-bar{
     border-radius: inherit;
@@ -48,13 +49,12 @@
     background-color: red;
 }
 .dot-slider {
-    height: 6px;
-    width: 6px;
+    height: 8px;
+    width: 8px;
     border-radius: 50%;
     border: 3px solid white;
     background-color: #f8104d;
     box-shadow: 3px 3px black;
-    margin: -3px;
     opacity: 0;
     transition-property: opacity;
     transition-duration: .3s;
@@ -68,5 +68,4 @@
 }
 .video-duration {
     justify-content: flex-end;
-    margin-right: 2px;
 }
